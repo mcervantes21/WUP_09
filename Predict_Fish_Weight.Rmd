@@ -86,6 +86,7 @@ Based on this model, we can see that the best option with 2 regressors that will
 
 ### The best regressor model for Bream is Length2 and Height, this is one out of two models that is the closest to the adjusted R-squared value of 0.936. 
 
+  
 # Smelt Model
 
 ```{r}
@@ -110,6 +111,10 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
+
+Based on this Model, the best two regression model for Smelt is Length2 and Width. I don't believe it is the overall best model if we are going based on the Adjusted R-squared value because it is in between two different values, 0.96 and 0.97. It appears that the overall best regression models for Smelt are the 3 and 5 regressor models because they align almost perfectly with the adjusted R-squared. 
+
+### The best two regressor model for Smelt is Length2 and Width, This model is in between two adjusted R-squared values.
 
 ### Discussion and Final Conclusion
 
