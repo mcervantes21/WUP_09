@@ -53,8 +53,11 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
   
+Based off this model we can see that the model with Height and Width is the perfect option to predict the weight for Perch because it has 2 regressors and aligns perfectly with the adjusted R-squared. 
+  
 ### The best two regressor model for Perch is Height and Width, this is also the best overall model as measured by adjusted R-squared.
-
+  
+  
 # Bream Model
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -82,13 +85,13 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
   
-Based on this model, we can see that the best option with 2 regressors that will predict the weight of a Bream is one that contains data from Length2 and Height. Unlike the Perch model, this model for Bream does not align perfectly with a specific Adjusted R-squared value, however it is very close to aligning with the value 0.936.
+Based on this model, we can see that the best option with two regressions that will predict the weight of a Bream is one that contains data from Length2 and Height. Unlike the Perch model, this model for Bream does not align perfectly with a specific Adjusted R-squared value, however, it is very close to aligning with the value 0.936. I think this option is the best it can get because it is the only model that is closest to aligning with and adjusted r-squared value.
 
 ### The best regressor model for Bream is Length2 and Height, this is one out of two models that is the closest to the adjusted R-squared value of 0.936. 
-
   
+    
 # Smelt Model
-
+  
 ```{r}
 # read in the fish data
 fishdata <- read.csv(file="Fish.csv", header=TRUE) 
@@ -111,11 +114,12 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
-
-Based on this Model, the best two regression model for Smelt is Length2 and Width. I don't believe it is the overall best model if we are going based on the Adjusted R-squared value because it is in between two different values, 0.96 and 0.97. It appears that the overall best regression models for Smelt are the 3 and 5 regressor models because they align almost perfectly with the adjusted R-squared. 
-
+  
+Based on this Model, the best two regression model for Smelt is Length2 and Width. I don't believe it is the overall best model if we are going based on the Adjusted R-squared value because it is in between two different values, 0.96 and 0.97. It appears that the overall best regression models for Smelt are the 3 and 5 regression models because they align almost perfectly with the adjusted R-squared. 
+  
 ### The best two regressor model for Smelt is Length2 and Width, This model is in between two adjusted R-squared values.
-
+  
+  
 ### Discussion and Final Conclusion
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
