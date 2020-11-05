@@ -18,11 +18,11 @@ require(tidyverse)
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
+In this assignment I am trying to show the best regression models that help predict the weight of 3 different species of fish which is the Perch, Bream and Smelt. 
 
 
 ## Build the best regression model you can that predicts the weight of perch
 ## Using only two predictor variables  
-
 
 
 
@@ -82,6 +82,9 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
   
+Based on this model, we can see that the best option with 2 regressors that will predict the weight of a Bream is one that contains data from Length2 and Height. Unlike the Perch model, this model for Bream does not align perfectly with a specific Adjusted R-squared value, however it is very close to aligning with the value 0.936.
+
+### The best regressor model for Bream is Length2 and Height, this is one out of two models that is the closest to the adjusted R-squared value of 0.936. 
 
 # Smelt Model
 
@@ -90,7 +93,6 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 fishdata <- read.csv(file="Fish.csv", header=TRUE) 
 SmeltData <- filter(fishdata,Species=="Smelt") %>% select(-Species)
 ```
-
 Now Build our Models
   
 ```{r}
