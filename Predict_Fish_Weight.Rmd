@@ -85,8 +85,29 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 
 # Smelt Model
 
+```{r}
+# read in the fish data
+fishdata <- read.csv(file="Fish.csv", header=TRUE) 
+SmeltData <- filter(fishdata,Species=="Smelt") %>% select(-Species)
+```
 
+Now Build our Models
+  
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = SmeltData,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
 
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
 
 ### Discussion and Final Conclusion
 
