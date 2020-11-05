@@ -18,7 +18,7 @@ require(tidyverse)
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
-In this assignment I am trying to show the best regression models that help predict the weight of 3 different species of fish which is the Perch, Bream and Smelt. 
+In this assignment I am trying to show the best regression models that help predict the weight of 3 different species of fish which is the Perch, Bream and Smelt. The data comes from the best regression models that I can build that uses only two predictor variables. 
 
 
 ## Build the best regression model you can that predicts the weight of perch
@@ -124,3 +124,4 @@ Based on this Model, the best two regression model for Smelt is Length2 and Widt
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+Since I have to rate how good each model was based on the adjusted R-squared, it appears that the best regression model I built was the one for Perch because the Height and Width aligned perfectly with the adjusted R-squared. This model was the only one that was perfect to predict the weight of a fish. The other models did not align perfectly with the adjusted R-squared therefore predicting the weight of those specific fishes would have been a bit more difficult. 
